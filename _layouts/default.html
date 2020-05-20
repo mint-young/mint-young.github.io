@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mint-young</title>
+    <link rel="stylesheet" href= {{ "assets/css/style.css" | relative_url}}>
+
+
+</head>
+<body>
+    <div id = "container">
+            <div id = "header">
+                <nav>
+                    <ul>
+                        <li><a href = "index.html" class="link">Home</a></li>
+                        <li><a href = "programming.html" class="link">Programming</a></li>
+                        <li><a href = "reading.html" class="link">Reading</a></li>
+                        <li><a href = "studying.html" class="link">Studying</a></li>    
+                    </ul>
+               
+                </nav>
+            </div>
+            
+            {{ content }}
+     
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<!-- Studying post-->
+
+<!-- 여기에 갤러리 형식으로 구성하기-->
+<div id = "list_container">
+    {% for post in site.categories.studying limit:9  %}    
+                <div class="list">
+                    <a href="{{ post.url }}" class="list_link">
+                        <span class="list_img">
+                            <img src="img.jpg" class="thumbnail_img" >
+                        </span>
+                        <span class="list_info">
+                            <p>{{ post.title }}</p>
+                        </span>
+                    </a>
+                </div>
+    
+    {% endfor %}
+    </div>
+    
+    
+    <footer>
+       <!-- Pagination links -->
+<div class="pagination">
+    
+  </div>
+    </footer>
