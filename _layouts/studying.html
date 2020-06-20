@@ -6,11 +6,11 @@ layout: default
 
 <!-- 여기에 갤러리 형식으로 구성하기-->
 <div id = "list_container">
-    {% for post in site.categories.studying limit:9  %}    
+    {% for post in site.categories.studying limit:9 %}    
                 <div class="list">
                     <a href="{{ post.url }}" class="list_link">
                         <span class="list_img">
-                            <img src="img.jpg" class="thumbnail_img" >
+                            <img src="" alt="image not found" class="thumbnail_img" >
                         </span>
                         <span class="list_info">
                             <p>{{ post.title }}</p>
@@ -19,12 +19,15 @@ layout: default
                 </div>
     
     {% endfor %}
-    </div>
+</div>
     
+<footer>
     
-    <footer>
-       <!-- Pagination links -->
-<div class="pagination">
-    
-  </div>
-    </footer>
+</footer>
+
+<script>
+    const $img = [...document.getElementsByTagName('img')]
+    $img.forEach((v, k) => {
+        v.src = `../studying_thumbnail/${k}.jpg`
+    })
+</script>

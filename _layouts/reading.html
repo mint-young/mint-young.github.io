@@ -10,7 +10,7 @@ layout: default
                 <div class="list">
                     <a href="{{ post.url }}" class="list_link">
                         <span class="list_img">
-                            <img src="img.jpg" class="thumbnail_img" >
+                            <img src="" alt="image not found" class="thumbnail_img" >
                         </span>
                         <span class="list_info">
                             <p>{{ post.title }}</p>
@@ -25,3 +25,10 @@ layout: default
     <footer>
         
     </footer>
+
+    <script>
+        const $img = [...document.getElementsByTagName('img')]
+        $img.forEach((v, k) => {
+            v.src = `../reading_thumbnail/${k}.jpg`
+        })
+    </script>
